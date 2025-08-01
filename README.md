@@ -1,8 +1,8 @@
-```markdown
-# Déploiement d'instance EC2 AWS avec Terraform
+# Infrastructure AWS avec Terraform
 
-## Description
-Cette configuration Terraform permet de déployer une instance EC2 dans la région AWS us-east-1 avec une configuration de base.
+## 📝 Description
+Ce projet Terraform permet de déployer une instance EC2 basique dans la région AWS us-east-1.
+
 
 ## Détails de la configuration
 
@@ -16,47 +16,30 @@ Cette configuration Terraform permet de déployer une instance EC2 dans la régi
 - **Tags**:
   - Name: ec2-ciscko
 
-## Prérequis
-- Compte AWS avec les bonnes permissions
-- Terraform installé sur votre machine locale
-- AWS CLI configuré avec les permissions appropriées
-- Paire de clés existante nommée "devops-nabster" dans la région AWS us-east-1
+## 🚀 Déploiement
 
-## Utilisation
-
-1. Initialiser Terraform:
+1. **Initialisation**
    ```bash
    terraform init
    ```
 
-2. Vérifier le plan d'exécution:
+2. **Vérification du plan**
    ```bash
    terraform plan
    ```
 
-3. Appliquer la configuration:
+3. **Application**
    ```bash
    terraform apply
    ```
 
-4. Détruire les ressources lorsqu'elles ne sont plus nécessaires:
+4. **Nettoyage**
    ```bash
    terraform destroy
    ```
 
-## Notes importantes
-- Vérifiez bien toutes les ressources avant de les déployer
-- Le type d'instance t2.micro est éligible au Free Tier mais vérifiez votre utilisation AWS
-- L'ID AMI est spécifique à la région us-east-1
-- Assurez-vous que vos credentials AWS ont les permissions nécessaires pour créer des instances EC2
+## 🔒 Sécurité
+- Utilisez des groupes de sécurité appropriés
+- Limitez les accès SSH aux IPs nécessaires
+- Mettez à jour régulièrement l'AMI
 
-## Variables
-Cette configuration utilise des valeurs en dur. Pour un usage en production, envisagez de les convertir en variables pour plus de flexibilité.
-
-## Considérations de sécurité
-- L'instance sera lancée avec la paire de clés spécifiée pour l'accès SSH
-- Assurez-vous d'associer des security groups appropriés (non montrés dans cette configuration)
-- Mettez régulièrement à jour l'AMI vers la dernière version pour les correctifs de sécurité
-
-## Auteur
-Medion Mbainaissem Narcisse
